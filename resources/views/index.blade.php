@@ -3,9 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- e necessario esta 'npm run dev' no projeto ou se não o 'npm run build' -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
-
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
         <link rel="stylesheet" href="{{ asset('css/index.css') }}">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
         <title class="text-2xl">Dr. Edvaneide landing page</title>
@@ -142,36 +140,85 @@
                 </div>
             </section>
             
-            <section id="depoiment" class="text-center max-w-4xl mx-auto py-16 px-6">
-                <h2 class="text-4xl font-bold">Mas sera que vou gostar dos resultado?</h2>
+            <section id="depoiment" class="text-center max-w-6xl mx-auto py-16 px-6">
+                <h2 class="text-6xl font-bold">Mas será que vou gostar do resultado?</h2>
                 <p class="text-gray-600 mt-4">Veja o que os pacientes dizem!</p>
             
-                <div class="mt-10 grid md:grid-cols-2 gap-6">
-                    <div class="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
-                        <p class="text-gray-700 italic">"Minha experiência foi incrível! Atendimento excelente e resultado impecável."</p>
-                        <h4 class="mt-4 font-semibold text-blue-600">- João Silva</h4>
+                <div class="mt-10 flex flex-wrap justify-center gap-6">
+                    <div class="bg-white p-6 rounded-lg shadow-lg border border-gray-200 text-center max-w-md">
+                        <img src="https://i.pravatar.cc/100?img=3" alt="Foto Usuário" class="w-16 h-16 mx-auto rounded-full">
+                        <h4 class="mt-3 font-semibold text-blue-600">João Silva</h4>
+                        <div class="flex justify-center mt-2 text-yellow-400">
+                            ⭐⭐⭐⭐⭐
+                        </div>
+                        <p class="text-gray-700 italic mt-3">"Minha experiência foi incrível! Atendimento excelente e resultado impecável."</p>
                     </div>
             
-                    <div class="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
-                        <p class="text-gray-700 italic">"Me senti muito confortável durante o tratamento. Profissionalismo e carinho em cada detalhe!"</p>
-                        <h4 class="mt-4 font-semibold text-blue-600">- Maria Oliveira</h4>
+                    <div class="bg-white p-6 rounded-lg shadow-lg border border-gray-200 text-center max-w-md">
+                        <img src="https://i.pravatar.cc/100?img=5" alt="Foto Usuário" class="w-16 h-16 mx-auto rounded-full">
+                        <h4 class="mt-3 font-semibold text-blue-600">Maria Oliveira</h4>
+                        <div class="flex justify-center mt-2 text-yellow-400">
+                            ⭐⭐⭐⭐⭐
+                        </div>
+                        <p class="text-gray-700 italic mt-3">"Me senti muito confortável durante o tratamento. Profissionalismo e carinho em cada detalhe!"</p>
+                    </div>
+            
+                    <div class="bg-white p-6 rounded-lg shadow-lg border border-gray-200 text-center max-w-md">
+                        <img src="https://i.pravatar.cc/100?img=7" alt="Foto Usuário" class="w-16 h-16 mx-auto rounded-full">
+                        <h4 class="mt-3 font-semibold text-blue-600">Carlos Mendes</h4>
+                        <div class="flex justify-center mt-2 text-yellow-400">
+                            ⭐⭐⭐⭐⭐
+                        </div>
+                        <p class="text-gray-700 italic mt-3">"Melhor dentista da região! Recomendo para todos que conheço."</p>
                     </div>
                 </div>
             
-                <a href="#" class="mt-8 inline-flex items-center  text-white px-6 py-3 rounded-lg btn-consult transition">
+                <a href="#" class="mt-8 inline-flex items-center text-white px-6 py-3 rounded-lg btn-consult transition">
                     <i class="bi bi-pencil-square text-xl mr-2"></i>
                     <span>Deixar meu depoimento</span>
                 </a>
             </section>
             
-            <section class="text-center max-w-3xl">
-                questions
+            <section class="text-center max-w-6xl mx-auto py-16 px-6">
+                <h2 class="text-4xl font-bold">Perguntas Frequentes</h2>
+                <p class="text-gray-600 mt-4">Tire suas dúvidas sobre nossos serviços.</p>
+            
+                <div class="mt-10 space-y-4">
+                    <div x-data="{ open: false }" class="border border-gray-300 rounded-lg shadow-lg">
+                        <button @click="open = !open" class="w-full text-left p-4 font-semibold flex justify-between items-center">
+                            Quais tratamentos vocês oferecem?
+                            <span x-show="!open">➕</span>
+                            <span x-show="open">➖</span>
+                        </button>
+                        <p x-show="open" class="p-4 text-gray-700 border-t">Oferecemos clareamento, facetas, lentes de contato dental, implantes, ortodontia e mais.</p>
+                    </div>
+            
+                    <div x-data="{ open: false }" class="border border-gray-300 rounded-lg shadow-lg">
+                        <button @click="open = !open" class="w-full text-left p-4 font-semibold flex justify-between items-center">
+                            O tratamento é doloroso?
+                            <span x-show="!open">➕</span>
+                            <span x-show="open">➖</span>
+                        </button>
+                        <p x-show="open" class="p-4 text-gray-700 border-t">Usamos técnicas modernas para minimizar qualquer desconforto. A maioria dos pacientes relata pouca ou nenhuma dor.</p>
+                    </div>
+            
+                    <div x-data="{ open: false }" class="border border-gray-300 rounded-lg shadow-lg">
+                        <button @click="open = !open" class="w-full text-left p-4 font-semibold flex justify-between items-center">
+                            Quanto tempo dura o tratamento?
+                            <span x-show="!open">➕</span>
+                            <span x-show="open">➖</span>
+                        </button>
+                        <p x-show="open" class="p-4 text-gray-700 border-t">Isso depende do tratamento, mas a maioria dos procedimentos pode ser concluída em poucas consultas.</p>
+                    </div>
+                </div>
             </section>
+            
         </main>
         <footer class="py-10">
             <div class="text-center">
                 footer
             </div>
         </footer>
+        <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.10.2/dist/cdn.min.js" defer></script> <!-- alpine e pra o accordion funcionar -->
     </body>
 </html>
