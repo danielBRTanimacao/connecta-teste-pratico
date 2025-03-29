@@ -4,8 +4,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- e necessario esta 'npm run dev' no projeto ou se não o 'npm run build' -->
-        @vite(['resources/css/index.css', 'resources/css/app.css', 'resources/js/app.js'])
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
 
+        <link rel="stylesheet" href="{{ asset('css/index.css') }}">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
         <title class="text-2xl">Dr. Edvaneide landing page</title>
     </head>
@@ -83,52 +84,86 @@
         </header>
 
         <main class="flex flex-col justify-center items-center">
-            <section class="h-[100dvh] text-center max-w-3xl">
-                <h1 class="text-6xl ">Como podemos transformar seu sorriso e sua vida?</h1>
-                <div class="flex pt-7 gap-5">
-                    <div class="bg-gray-400 py-5 px-3">
-                        <h4 class="text-2xl">Odontologia estética</h4>
-                        <p class="text-sm text-start">A dentística é a área que trata a estética na odontologia, com procedimentos como clareamento, facetas e lentes</p>
-                        <img src="dentes" alt="dentes">
+            <section class="h-[100dvh] text-center max-w-[1100px] mx-auto px-5">
+                <h1 class="text-6xl font-bold">Como podemos transformar seu sorriso e sua vida?</h1>
+                
+                <div class="flex flex-wrap justify-center pt-7 gap-6">
+                    <div class="bg-gray-200 rounded-xl w-[300px] shadow-xl">
+                        <div class="p-5 text-start">
+                            <h4 class="text-3xl font-semibold">Odontologia estética</h4>
+                            <p class="text-md">A dentística é a área que trata a estética na odontologia, com procedimentos como clareamento, facetas e lentes.</p>
+                        </div>
+                        <img class="rounded-b-xl w-full" src="https://fakeimg.pl/300/ff0000" alt="dentes">
                     </div>
-                    <div class="bg-gray-400 py-5 px-3">
-                        <h4 class="text-2xl">Odontologia estética</h4>
-                        <p class="text-sm text-start">A dentística é a área que trata a estética na odontologia, com procedimentos como clareamento, facetas e lentes</p>
-                        <img src="dentes" alt="dentes">
+            
+                    <div class="bg-gray-200 rounded-xl w-[300px] shadow-xl">
+                        <div class="p-5 text-start">
+                            <h4 class="text-3xl font-semibold">Periodontia</h4>
+                            <p class="text-md">A periodontia trata dos tecidos ao redor dos dentes, cini a gengiva, o osso e o ligamento periodontal.</p>
+                        </div>
+                        <img class="rounded-b-xl w-full mt-9" src="https://fakeimg.pl/300/ff0000" alt="dentes">
                     </div>
-                    <div class="bg-gray-400 py-5 px-3">
-                        <h4 class="text-2xl">Odontologia estética</h4>
-                        <p class="text-sm text-start">A dentística é a área que trata a estética na odontologia, com procedimentos como clareamento, facetas e lentes</p>
-                        <img src="dentes" alt="dentes">
+            
+                    <div class="bg-gray-200 rounded-xl w-[300px] shadow-xl">
+                        <div class="p-5 text-start">
+                            <h4 class="text-3xl font-semibold">Implantodontia</h4>
+                            <p class="text-md">Os implantes dentários são a solução mais moderna e segura para substituir dentes perdidos.</p>
+                        </div>
+                        <img class="rounded-b-xl w-full mt-15" src="https://fakeimg.pl/300/ff0000" alt="dentes">
                     </div>
                 </div>
             </section>
-            <section class="h-[100dvh] flex text-center max-w-3xl">
-                <div class="text-start">
-                    <h4>Conheça o dentista</h4>
-                    <h2>Edvaneide</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi velit 
+            
+            <section class="h-[100dvh] flex items-center justify-center max-w-5xl mx-auto px-5 gap-x-10">
+                <div class="text-start flex-1">
+                    <h4 class="text-xl text-gray-500 font-semibold">Conheça a dentista</h4>
+                    <h2 class="text-7xl font-bold copper">Edvaneide</h2>
+                    <p class="text-gray-600 mt-4">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi velit 
                         illum laudantium repudiandae distinctio totam earum. Et quibusdam 
                         quisquam, minima ipsum illo recusandae aspernatur quam temporibus 
                         quod. Quam, autem consequatur.
                     </p>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi velit 
+                    <p class="text-gray-600 mt-4">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi velit 
                         illum laudantium repudiandae distinctio totam earum. Et quibusdam 
                         quisquam, minima ipsum illo recusandae aspernatur quam temporibus 
                         quod. Quam, autem consequatur.
                     </p>
-                    <a href="#" class="flex items-center btn-consult text-darker px-15 py-5 rounded-lg shadow-md hover:bg-green-600">
+                    
+                    <a href="#" class="mt-6 inline-flex items-center btn-consult text-white px-6 py-3 rounded-lg shadow-md hover:bg-green-600 transition">
                         <i class="bi bi-whatsapp text-xl mr-2"></i>
                         <span>Agendar consulta</span>
                     </a>
                 </div>
-                <div>
-                    <img src="{{ asset('svg/Doctor.svg') }}" alt="dentist-image">
+            
+                <div class="flex-1">
+                    <img src="{{ asset('svg/Doctor.svg') }}" alt="dentist-image" class="max-w-full h-auto">
                 </div>
             </section>
-            <section class="text-center max-w-3xl" id="depoiment">
-                people opnion
+            
+            <section id="depoiment" class="text-center max-w-4xl mx-auto py-16 px-6">
+                <h2 class="text-4xl font-bold">Mas sera que vou gostar dos resultado?</h2>
+                <p class="text-gray-600 mt-4">Veja o que os pacientes dizem!</p>
+            
+                <div class="mt-10 grid md:grid-cols-2 gap-6">
+                    <div class="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
+                        <p class="text-gray-700 italic">"Minha experiência foi incrível! Atendimento excelente e resultado impecável."</p>
+                        <h4 class="mt-4 font-semibold text-blue-600">- João Silva</h4>
+                    </div>
+            
+                    <div class="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
+                        <p class="text-gray-700 italic">"Me senti muito confortável durante o tratamento. Profissionalismo e carinho em cada detalhe!"</p>
+                        <h4 class="mt-4 font-semibold text-blue-600">- Maria Oliveira</h4>
+                    </div>
+                </div>
+            
+                <a href="#" class="mt-8 inline-flex items-center  text-white px-6 py-3 rounded-lg btn-consult transition">
+                    <i class="bi bi-pencil-square text-xl mr-2"></i>
+                    <span>Deixar meu depoimento</span>
+                </a>
             </section>
+            
             <section class="text-center max-w-3xl">
                 questions
             </section>
