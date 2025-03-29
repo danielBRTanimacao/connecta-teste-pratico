@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+    --copper-color: #aa805f;
+    --copper-darker: #8b5a2b;
+    --darker-color: rgb(15, 28, 46);
+    --secondary-font: "Montserrat", sans-serif;
+    --principal-font: "Times New Roman", Times, serif;
+}
+
+body {
+    color: var(--darker-color);
+    background-image: url(../images/dentist.png);
+    background-color: rgba(128, 128, 128, 0.4);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+    backdrop-filter: blur(5px);
+}
+
+.glassmorphism {
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+}
+
+.border-bottom {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.copper {
+    color: var(--copper-color);
+}
+
+.copper-border {
+    border-color: var(--copper-color);
+}
+
+.btn-consult {
+    background: var(--copper-color);
+}
+
+.btn-consult:hover {
+    background: var(--copper-darker);
+    color: white;
+}
+
+.lead {
+    font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--principal-font);
+    font-weight: 600;
+}
+
+p,
+a,
+li span {
+    font-family: var(--secondary-font);
+}
+
+.nav-li li a:hover {
+    color: var(--copper-color);
+}
+
+footer {
+    background-color: var(--darker-color);
+    color: white;
+}

@@ -1,11 +1,142 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- e necessario esta 'npm run dev' no projeto ou se não o 'npm run build' -->
+        @vite(['resources/css/index.css', 'resources/css/app.css', 'resources/js/app.js'])
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <title class="text-2xl">Dr. Edvaneide landing page</title>
+    </head>
+    <body>
+        <nav id="init" class="fixed top-0 left-0 w-full glassmorphism p-4 font-primary border-bottom">
+            <div class="flex justify-center items-center gap-50">
+                <a href="/" class="text-lg font-bold text-blue-600">Assinatura</a>
+
+                <ul class="flex space-x-6 nav-li">
+                    <li><a href="#init">Início</a></li>
+                    <li><a href="#about">Sobre nós</a></li>
+                    <li><a href="#depoiment">Depoimentos</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            
+                <div>
+                    <a href="#" class="flex items-center btn-consult px-4 py-2 rounded-lg shadow-md hover:bg-green-600">
+                        <i class="bi bi-whatsapp text-xl mr-2"></i>
+                        <span>Agendar consulta</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        
+        <header class="flex justify-center items-center h-[100dvh]">
+            <div class="max-w-lg">
+                <h2 class="lead text-xl">Dr. Edvaneide</h2>
+                <h1 class="text-7xl uppercase"><span class="copper">Sorria</span> com confiança!</h1>
+                <p class="py-4 font-bold">Agende sua consulta e conquiste o sorriso dos seus sonhos.</p>
+                <div class="flex items-center">
+                    <a href="#" class="flex items-center btn-consult text-darker px-15 py-5 rounded-lg shadow-md hover:bg-green-600">
+                        <i class="bi bi-whatsapp text-xl mr-2"></i>
+                        <span>Agendar consulta</span>
+                    </a>
+                </div>
+                <div class="py-5">
+                    <a href="#depoiment">
+                        <img src="{{ asset('svg/Views.svg') }}" alt="img-povo-usando-o-app">
+                    </a>
+                </div>
+            </div>
+            <div class="absolute top-156 border-1 rounded-xl border-gray-400 py-5 px-35 glassmorphism text-xl">
+                <ul class="flex items-center gap-10">
+                    <li class="flex items-center gap-2">
+                        <div class="bg-white px-2 p-1 border-1 copper-border rounded-full">
+                            <i class="bi bi-bookmark"></i>
+                        </div>
+                        <div>
+                            <span>Dentista Especialista</span>
+                        </div>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <div class="bg-white px-2 p-1 border-1 copper-border rounded-full">
+
+                            <i class="bi bi-heart-pulse"></i>
+                        </div>
+                        <div>
+                            <span>+ De 3 Mil Cirurgias</span>
+                        </div>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <div class="bg-white px-2 p-1 border-1 copper-border rounded-full">
+                            <i class="bi bi-gem"></i>
+                        </div>
+                        <div>
+                            <span>Resultados Incríveis</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <img src="{{ asset('svg/Doctor.svg') }}" alt="dentist-image">
+            </div>
+        </header>
+
+        <main class="flex flex-col justify-center items-center">
+            <section class="h-[100dvh] text-center max-w-3xl">
+                <h1 class="text-6xl ">Como podemos transformar seu sorriso e sua vida?</h1>
+                <div class="flex pt-7 gap-5">
+                    <div class="bg-gray-400 py-5 px-3">
+                        <h4 class="text-2xl">Odontologia estética</h4>
+                        <p class="text-sm text-start">A dentística é a área que trata a estética na odontologia, com procedimentos como clareamento, facetas e lentes</p>
+                        <img src="dentes" alt="dentes">
+                    </div>
+                    <div class="bg-gray-400 py-5 px-3">
+                        <h4 class="text-2xl">Odontologia estética</h4>
+                        <p class="text-sm text-start">A dentística é a área que trata a estética na odontologia, com procedimentos como clareamento, facetas e lentes</p>
+                        <img src="dentes" alt="dentes">
+                    </div>
+                    <div class="bg-gray-400 py-5 px-3">
+                        <h4 class="text-2xl">Odontologia estética</h4>
+                        <p class="text-sm text-start">A dentística é a área que trata a estética na odontologia, com procedimentos como clareamento, facetas e lentes</p>
+                        <img src="dentes" alt="dentes">
+                    </div>
+                </div>
+            </section>
+            <section class="h-[100dvh] flex text-center max-w-3xl">
+                <div class="text-start">
+                    <h4>Conheça o dentista</h4>
+                    <h2>Edvaneide</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi velit 
+                        illum laudantium repudiandae distinctio totam earum. Et quibusdam 
+                        quisquam, minima ipsum illo recusandae aspernatur quam temporibus 
+                        quod. Quam, autem consequatur.
+                    </p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi velit 
+                        illum laudantium repudiandae distinctio totam earum. Et quibusdam 
+                        quisquam, minima ipsum illo recusandae aspernatur quam temporibus 
+                        quod. Quam, autem consequatur.
+                    </p>
+                    <a href="#" class="flex items-center btn-consult text-darker px-15 py-5 rounded-lg shadow-md hover:bg-green-600">
+                        <i class="bi bi-whatsapp text-xl mr-2"></i>
+                        <span>Agendar consulta</span>
+                    </a>
+                </div>
+                <div>
+                    <img src="{{ asset('svg/Doctor.svg') }}" alt="dentist-image">
+                </div>
+            </section>
+            <section class="text-center max-w-3xl" id="depoiment">
+                people opnion
+            </section>
+            <section class="text-center max-w-3xl">
+                questions
+            </section>
+        </main>
+        <footer class="py-10">
+            <div class="text-center">
+                footer
+            </div>
+        </footer>
+    </body>
 </html>
