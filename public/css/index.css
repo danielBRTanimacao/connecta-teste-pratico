@@ -92,3 +92,19 @@ li span {
 footer {
     background-color: var(--darker-color);
 }
+
+@media (max-width: 432.98px) {
+    .consult-hidden {
+        display: none;
+    }
+}
+
+@media (max-width: 575.98px) {
+}
+
+@media (max-width: 911.98px) {
+    .doctor-image,
+    .navigation {
+        display: none;
+    }
+}

@@ -10,12 +10,12 @@
     </head>
     <body>
         <nav class="sticky top-0 left-0 w-full glassmorphism p-4 font-primary border-bottom z-50">
-            <div class="flex justify-center items-center gap-42">
+            <div class="flex justify-evenly items-center">
                 <a href="/" class="text-4xl signature font-bold">
                     Dr. Edvaneide
                 </a>
 
-                <ul class="flex space-x-6 nav-li">
+                <ul class="flex space-x-6 nav-li navigation">
                     <li><a href="#init">Início</a></li>
                     <li><a href="#about">Sobre nós</a></li>
                     <li><a href="#depoiment">Depoimentos</a></li>
@@ -23,7 +23,7 @@
                     <li><a href="#faq">FAQ</a></li>
                 </ul>
             
-                <div>
+                <div class="consult-hidden">
                     <!-- Esté número e irreal mas e para testar o redirecionamento --> 
                     <a href="https://wa.me/5511998765432" target="_blank" class="flex items-center btn-consult px-4 py-2 rounded-lg shadow-md">
                         <i class="bi bi-whatsapp text-xl mr-2"></i>
@@ -33,7 +33,7 @@
             </div>
         </nav>
         
-        <header id="init" class="flex justify-center items-center h-[100dvh]">
+        <header id="init" class="flex justify-center items-center h-[100dvh]"> <!-- deixar todos os abaixos responsavel --> 
             <div class="max-w-lg">
                 <h2 class="lead text-xl">Dr. Edvaneide</h2>
                 <h1 class="text-7xl uppercase"><span class="copper">Sorria</span> com confiança!</h1>
@@ -50,7 +50,7 @@
                     </a>
                 </div>
             </div>
-            <div class="absolute top-170 border-1 rounded-xl border-gray-400 py-5 px-35 glassmorphism text-xl">
+            <div class="results absolute top-170 border-1 rounded-xl border-gray-400 py-5 px-35 glassmorphism text-xl">
                 <ul class="flex items-center gap-10">
                     <li class="flex items-center gap-2">
                         <div class="bg-white px-2 p-1 border-1 copper-border rounded-full">
@@ -79,7 +79,7 @@
                     </li>
                 </ul>
             </div>
-            <div>
+            <div class="doctor-image">
                 <img src="{{ asset('svg/Doctor.svg') }}" alt="dentist-image">
             </div>
         </header>
@@ -195,7 +195,7 @@
                 <div class="mt-17 flex flex-col md:flex-row gap-6">
                     <div class="w-full md:w-1/2 space-y-4">
                         <div x-data="{ open: false }" class="border border-gray-300 rounded-lg shadow-lg">
-                            <button @click="open = !open" class="w-full text-left p-4 font-semibold flex justify-between items-center">
+                            <button @click="open = !open" class="w-full text-left p-4 font-semibold flex justify-between items-center cursor-pointer">
                                 Quais tratamentos vocês oferecem?
                                 <span x-show="!open"><i class="text-2xl bi bi-plus-lg"></i></span>
                                 <span x-show="open"><i class="text-2xl bi bi-dash-lg"></i></span>
@@ -204,7 +204,7 @@
                         </div>
             
                         <div x-data="{ open: false }" class="border border-gray-300 rounded-lg shadow-lg">
-                            <button @click="open = !open" class="w-full text-left p-4 font-semibold flex justify-between items-center">
+                            <button @click="open = !open" class="w-full text-left p-4 font-semibold flex justify-between items-center cursor-pointer">
                                 O tratamento é doloroso?
                                 <span x-show="!open"><i class="text-2xl bi bi-plus-lg"></i></span>
                                 <span x-show="open"><i class="text-2xl bi bi-dash-lg"></i></span>
@@ -213,7 +213,7 @@
                         </div>
             
                         <div x-data="{ open: false }" class="border border-gray-300 rounded-lg shadow-lg">
-                            <button @click="open = !open" class="w-full text-left p-4 font-semibold flex justify-between items-center">
+                            <button @click="open = !open" class="w-full text-left p-4 font-semibold flex justify-between items-center cursor-pointer">
                                 Quanto tempo dura o tratamento?
                                 <span x-show="!open"><i class="text-2xl bi bi-plus-lg"></i></span>
                                 <span x-show="open"><i class="text-2xl bi bi-dash-lg"></i></span>
