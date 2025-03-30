@@ -11,7 +11,9 @@
     <body>
         <nav id="init" class="fixed top-0 left-0 w-full glassmorphism p-4 font-primary border-bottom">
             <div class="flex justify-center items-center gap-50">
-                <a href="/" class="text-lg font-bold text-blue-600">Assinatura</a>
+                <a href="/" class="text-4xl signature font-bold">
+                    Dr. Edvaneide
+                </a>
 
                 <ul class="flex space-x-6 nav-li">
                     <li><a href="#init">Início</a></li>
@@ -91,7 +93,7 @@
                             <h4 class="text-3xl font-semibold">Odontologia estética</h4>
                             <p class="text-md">A dentística é a área que trata a estética na odontologia, com procedimentos como clareamento, facetas e lentes.</p>
                         </div>
-                        <img class="rounded-b-xl w-full" src="https://fakeimg.pl/300/ff0000" alt="dentes">
+                        <img class="rounded-b-xl w-full" src="{{ asset('images/mouthOne.png') }}" alt="dentes">
                     </div>
             
                     <div class="bg-gray-200 rounded-xl w-[300px] shadow-xl">
@@ -99,7 +101,7 @@
                             <h4 class="text-3xl font-semibold">Periodontia</h4>
                             <p class="text-md">A periodontia trata dos tecidos ao redor dos dentes, cini a gengiva, o osso e o ligamento periodontal.</p>
                         </div>
-                        <img class="rounded-b-xl w-full mt-9" src="https://fakeimg.pl/300/ff0000" alt="dentes">
+                        <img class="rounded-b-xl w-full mt-9" src="{{ asset('images/mouthTwo.png') }}" alt="dentes">
                     </div>
             
                     <div class="bg-gray-200 rounded-xl w-[300px] shadow-xl">
@@ -107,45 +109,49 @@
                             <h4 class="text-3xl font-semibold">Implantodontia</h4>
                             <p class="text-md">Os implantes dentários são a solução mais moderna e segura para substituir dentes perdidos.</p>
                         </div>
-                        <img class="rounded-b-xl w-full mt-15" src="https://fakeimg.pl/300/ff0000" alt="dentes">
+                        <img class="rounded-b-xl w-full mt-15" src="{{ asset('images/mouthThree.png') }}" alt="dentes">
+                    </div>
+                </div>
+            </section>
+
+            <section class="h-[100dvh] w-full flex items-center justify-center px-5 bg-image">
+                <div class="max-w-5xl w-full mx-auto flex items-center gap-x-10">
+                    <div class="text-start flex-1">
+                        <h4 class="text-xl text-gray-500 font-semibold">Conheça a dentista</h4>
+                        <h2 class="text-7xl font-bold copper">Edvaneide</h2>
+                        <p class="text-gray-600 mt-4">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi velit 
+                            illum laudantium repudiandae distinctio totam earum. Et quibusdam 
+                            quisquam, minima ipsum illo recusandae aspernatur quam temporibus 
+                            quod. Quam, autem consequatur.
+                        </p>
+                        <p class="text-gray-600 mt-4">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi velit 
+                            illum laudantium repudiandae distinctio totam earum. Et quibusdam 
+                            quisquam, minima ipsum illo recusandae aspernatur quam temporibus 
+                            quod. Quam, autem consequatur.
+                        </p>
+                        
+                        <a href="#" class="mt-6 inline-flex items-center btn-consult text-white px-6 py-3 rounded-lg shadow-md hover:bg-green-600 transition">
+                            <i class="bi bi-whatsapp text-xl mr-2"></i>
+                            <span>Agendar consulta</span>
+                        </a>
+                    </div>
+            
+                    <div class="flex-1">
+                        <img src="{{ asset('svg/Doctor.svg') }}" alt="dentist-image" class="max-w-full h-auto">
                     </div>
                 </div>
             </section>
             
-            <section class="h-[100dvh] flex items-center justify-center max-w-5xl mx-auto px-5 gap-x-10">
-                <div class="text-start flex-1">
-                    <h4 class="text-xl text-gray-500 font-semibold">Conheça a dentista</h4>
-                    <h2 class="text-7xl font-bold copper">Edvaneide</h2>
-                    <p class="text-gray-600 mt-4">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi velit 
-                        illum laudantium repudiandae distinctio totam earum. Et quibusdam 
-                        quisquam, minima ipsum illo recusandae aspernatur quam temporibus 
-                        quod. Quam, autem consequatur.
-                    </p>
-                    <p class="text-gray-600 mt-4">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi velit 
-                        illum laudantium repudiandae distinctio totam earum. Et quibusdam 
-                        quisquam, minima ipsum illo recusandae aspernatur quam temporibus 
-                        quod. Quam, autem consequatur.
-                    </p>
-                    
-                    <a href="#" class="mt-6 inline-flex items-center btn-consult text-white px-6 py-3 rounded-lg shadow-md hover:bg-green-600 transition">
-                        <i class="bi bi-whatsapp text-xl mr-2"></i>
-                        <span>Agendar consulta</span>
-                    </a>
-                </div>
             
-                <div class="flex-1">
-                    <img src="{{ asset('svg/Doctor.svg') }}" alt="dentist-image" class="max-w-full h-auto">
-                </div>
-            </section>
+            <section id="depoiment" class="flex flex-col justify-center items-center max-w-6xl mx-auto py-16 px-6">
+                <img src="{{ asset('svg/SecondViews.svg') }}" alt="">
+                <h2 class="text-6xl font-bold pt-5">Mas será que vou gostar do resultado?</h2>
+                <p class="text-gray-600 pt-2 text-xl">Veja o que os pacientes dizem!</p>
             
-            <section id="depoiment" class="text-center max-w-6xl mx-auto py-16 px-6">
-                <h2 class="text-6xl font-bold">Mas será que vou gostar do resultado?</h2>
-                <p class="text-gray-600 mt-4">Veja o que os pacientes dizem!</p>
-            
-                <div class="mt-10 flex flex-wrap justify-center gap-6">
-                    <div class="bg-white p-6 rounded-lg shadow-lg border border-gray-200 text-center max-w-md">
+                <div class="mt-5 flex flex-wrap justify-center gap-6">
+                    <div class="bg-white p-6 rounded-lg shadow-xl border border-gray-200 text-center max-w-md">
                         <img src="https://i.pravatar.cc/100?img=3" alt="Foto Usuário" class="w-16 h-16 mx-auto rounded-full">
                         <h4 class="mt-3 font-semibold text-blue-600">João Silva</h4>
                         <div class="flex justify-center mt-2 text-yellow-400">
@@ -154,7 +160,7 @@
                         <p class="text-gray-700 italic mt-3">"Minha experiência foi incrível! Atendimento excelente e resultado impecável."</p>
                     </div>
             
-                    <div class="bg-white p-6 rounded-lg shadow-lg border border-gray-200 text-center max-w-md">
+                    <div class="bg-white p-6 rounded-lg shadow-xl border border-gray-200 text-center max-w-md">
                         <img src="https://i.pravatar.cc/100?img=5" alt="Foto Usuário" class="w-16 h-16 mx-auto rounded-full">
                         <h4 class="mt-3 font-semibold text-blue-600">Maria Oliveira</h4>
                         <div class="flex justify-center mt-2 text-yellow-400">
@@ -163,7 +169,7 @@
                         <p class="text-gray-700 italic mt-3">"Me senti muito confortável durante o tratamento. Profissionalismo e carinho em cada detalhe!"</p>
                     </div>
             
-                    <div class="bg-white p-6 rounded-lg shadow-lg border border-gray-200 text-center max-w-md">
+                    <div class="bg-white p-6 rounded-lg shadow-xl border border-gray-200 text-center max-w-md">
                         <img src="https://i.pravatar.cc/100?img=7" alt="Foto Usuário" class="w-16 h-16 mx-auto rounded-full">
                         <h4 class="mt-3 font-semibold text-blue-600">Carlos Mendes</h4>
                         <div class="flex justify-center mt-2 text-yellow-400">
@@ -179,46 +185,78 @@
                 </a>
             </section>
             
-            <section class="text-center max-w-6xl mx-auto py-16 px-6">
-                <h2 class="text-4xl font-bold">Perguntas Frequentes</h2>
-                <p class="text-gray-600 mt-4">Tire suas dúvidas sobre nossos serviços.</p>
+            <section class="max-w-6xl mx-auto py-16 px-6">
+                <div class="text-6xl font-bold text-center glassmorphism pb-10 bg-faq">
+                    <h2>Perguntas</h2>
+                    <h2>Frequentes</h2>
+                </div>
             
-                <div class="mt-10 space-y-4">
-                    <div x-data="{ open: false }" class="border border-gray-300 rounded-lg shadow-lg">
-                        <button @click="open = !open" class="w-full text-left p-4 font-semibold flex justify-between items-center">
-                            Quais tratamentos vocês oferecem?
-                            <span x-show="!open">➕</span>
-                            <span x-show="open">➖</span>
-                        </button>
-                        <p x-show="open" class="p-4 text-gray-700 border-t">Oferecemos clareamento, facetas, lentes de contato dental, implantes, ortodontia e mais.</p>
+                <div class="mt-10 flex flex-col md:flex-row gap-6">
+                    <div class="w-full md:w-1/2 space-y-4">
+                        <div x-data="{ open: false }" class="border border-gray-300 rounded-lg shadow-lg">
+                            <button @click="open = !open" class="w-full text-left p-4 font-semibold flex justify-between items-center">
+                                Quais tratamentos vocês oferecem?
+                                <span x-show="!open">➕</span>
+                                <span x-show="open">➖</span>
+                            </button>
+                            <p x-show="open" class="p-4 text-gray-700 border-t">Oferecemos clareamento, facetas, lentes de contato dental, implantes, ortodontia e mais.</p>
+                        </div>
+            
+                        <div x-data="{ open: false }" class="border border-gray-300 rounded-lg shadow-lg">
+                            <button @click="open = !open" class="w-full text-left p-4 font-semibold flex justify-between items-center">
+                                O tratamento é doloroso?
+                                <span x-show="!open">➕</span>
+                                <span x-show="open">➖</span>
+                            </button>
+                            <p x-show="open" class="p-4 text-gray-700 border-t">Usamos técnicas modernas para minimizar qualquer desconforto.</p>
+                        </div>
+            
+                        <div x-data="{ open: false }" class="border border-gray-300 rounded-lg shadow-lg">
+                            <button @click="open = !open" class="w-full text-left p-4 font-semibold flex justify-between items-center">
+                                Quanto tempo dura o tratamento?
+                                <span x-show="!open">➕</span>
+                                <span x-show="open">➖</span>
+                            </button>
+                            <p x-show="open" class="p-4 text-gray-700 border-t">Isso depende do tratamento, mas a maioria dos procedimentos pode ser concluída em poucas consultas.</p>
+                        </div>
                     </div>
             
-                    <div x-data="{ open: false }" class="border border-gray-300 rounded-lg shadow-lg">
-                        <button @click="open = !open" class="w-full text-left p-4 font-semibold flex justify-between items-center">
-                            O tratamento é doloroso?
-                            <span x-show="!open">➕</span>
-                            <span x-show="open">➖</span>
-                        </button>
-                        <p x-show="open" class="p-4 text-gray-700 border-t">Usamos técnicas modernas para minimizar qualquer desconforto. A maioria dos pacientes relata pouca ou nenhuma dor.</p>
-                    </div>
-            
-                    <div x-data="{ open: false }" class="border border-gray-300 rounded-lg shadow-lg">
-                        <button @click="open = !open" class="w-full text-left p-4 font-semibold flex justify-between items-center">
-                            Quanto tempo dura o tratamento?
-                            <span x-show="!open">➕</span>
-                            <span x-show="open">➖</span>
-                        </button>
-                        <p x-show="open" class="p-4 text-gray-700 border-t">Isso depende do tratamento, mas a maioria dos procedimentos pode ser concluída em poucas consultas.</p>
+                    <div class="w-full md:w-1/2 flex flex-col justify-center p-6">
+                        <h2 class="text-2xl font-semibold">Ainda ficou com dúvidas?</h2>
+                        <p class="text-gray-600 mt-2">Chame no WhatsApp, iremos te atender, e tirar todas as suas dúvidas. Estou ansiosa para te ajudar a consquistar seu sorriso dos sonhos!</p>
+                        <a href="#" class="mt-4 flex items-center btn-consult bg-green-500 text-white px-6 py-3 rounded-lg shadow-md hover:bg-green-600">
+                            <i class="bi bi-whatsapp text-xl mr-2"></i>
+                            <span>Agendar consulta</span>
+                        </a>
                     </div>
                 </div>
             </section>
-            
         </main>
-        <footer class="py-10">
-            <div class="text-center">
-                footer
+        <footer class="py-10 text-white">
+            <div class="max-w-6xl mx-auto px-6 flex justify-between">
+                <h3 class="text-2xl text-white signature font-semibold">
+                    Dr. Edvaneide
+                </h3>
+                <p class="text-gray-400 mt-2">Dr. Edvaneide. Confie sua aprarência com quem é especialista!</p>
+        
+                <div class="flex justify-center mt-6 gap-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="bi bi-facebook text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="bi bi-instagram text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="bi bi-whatsapp text-2xl"></i>
+                    </a>
+                </div>
+        
+                <div class="mt-6 text-gray-400 text-sm">
+                   <p>(12) 345678910</p>
+                   <p>Agende sua consulta!</p>
+                </div>
             </div>
         </footer>
-        <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.10.2/dist/cdn.min.js" defer></script> <!-- alpine e pra o accordion funcionar -->
+        <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.10.2/dist/cdn.min.js"></script> <!-- alpine e pra o accordion funcionar -->
     </body>
 </html>

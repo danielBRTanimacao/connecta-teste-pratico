@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&display=swap");
 
 :root {
     --copper-color: #aa805f;
@@ -6,9 +7,12 @@
     --darker-color: rgb(15, 28, 46);
     --secondary-font: "Montserrat", sans-serif;
     --principal-font: "Times New Roman", Times, serif;
+    --signature: "Corinthia", cursive;
 }
 
-body {
+body,
+.bg-image,
+.bg-faq {
     color: var(--darker-color);
     background-image: url(../images/dentist.png);
     background-color: rgba(128, 128, 128, 0.4);
@@ -16,6 +20,14 @@ body {
     background-position: top;
     background-size: contain;
     backdrop-filter: blur(5px);
+}
+
+.bg-image {
+    background-image: url(../images/consultDentist.png);
+}
+
+.bg-faq {
+    background-image: url(../images/FAQ.png);
 }
 
 .glassmorphism {
@@ -46,6 +58,10 @@ body {
 
 .lead {
     font-weight: 400;
+}
+
+.signature {
+    font-family: var(--signature);
 }
 
 h1,
