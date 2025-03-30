@@ -9,7 +9,7 @@
         <title class="text-2xl">Dr. Edvaneide landing page</title>
     </head>
     <body>
-        <nav id="init" class="sticky top-0 left-0 w-full glassmorphism p-4 font-primary border-bottom z-50">
+        <nav class="sticky top-0 left-0 w-full glassmorphism p-4 font-primary border-bottom z-50">
             <div class="flex justify-center items-center gap-42">
                 <a href="/" class="text-4xl signature font-bold">
                     Dr. Edvaneide
@@ -25,7 +25,7 @@
             
                 <div>
                     <!-- Esté número e irreal mas e para testar o redirecionamento --> 
-                    <a href="https://wa.me/5511998765432" target="_blank" class="flex items-center btn-consult px-4 py-2 rounded-lg shadow-md hover:bg-green-600">
+                    <a href="https://wa.me/5511998765432" target="_blank" class="flex items-center btn-consult px-4 py-2 rounded-lg shadow-md">
                         <i class="bi bi-whatsapp text-xl mr-2"></i>
                         <span>Agendar consulta</span>
                     </a>
@@ -33,13 +33,13 @@
             </div>
         </nav>
         
-        <header class="flex justify-center items-center h-[100dvh]">
+        <header id="init" class="flex justify-center items-center h-[100dvh]">
             <div class="max-w-lg">
                 <h2 class="lead text-xl">Dr. Edvaneide</h2>
                 <h1 class="text-7xl uppercase"><span class="copper">Sorria</span> com confiança!</h1>
                 <p class="py-4 font-bold">Agende sua consulta e conquiste o sorriso dos seus sonhos.</p>
                 <div class="flex items-center">
-                    <a href="https://wa.me/5511998765432" target="_blank" class="flex items-center btn-consult px-15 py-5 rounded-lg shadow-md hover:bg-green-600">
+                    <a href="https://wa.me/5511998765432" target="_blank" class="flex items-center btn-consult px-15 py-5 rounded-lg shadow-md">
                         <i class="bi bi-whatsapp text-xl mr-2"></i>
                         <span>Agendar consulta</span>
                     </a>
@@ -117,7 +117,7 @@
 
             <section class="h-[100dvh] w-full flex items-center justify-center px-5 bg-image" id="blog">
                 <div class="max-w-5xl w-full mx-auto flex items-center gap-x-10">
-                    <div class="text-start flex-1 ">
+                    <div class="text-start flex-1">
                         <h4 class="text-xl text-gray-500 font-semibold">Conheça a dentista</h4>
                         <h2 class="text-7xl font-bold copper">Edvaneide</h2>
                         <p class="text-gray-600 mt-4">
@@ -133,7 +133,7 @@
                             quod. Quam, autem consequatur.
                         </p>
                         
-                        <a href="https://wa.me/5511998765432" target="_blank" class="mt-6 inline-flex items-center btn-consult px-6 py-3 rounded-lg shadow-md hover:bg-green-600 transition">
+                        <a href="https://wa.me/5511998765432" target="_blank" class="mt-6 inline-flex items-center btn-consult px-6 py-3 rounded-lg shadow-md transition">
                             <i class="bi bi-whatsapp text-xl mr-2"></i>
                             <span>Agendar consulta</span>
                         </a>
@@ -197,8 +197,8 @@
                         <div x-data="{ open: false }" class="border border-gray-300 rounded-lg shadow-lg">
                             <button @click="open = !open" class="w-full text-left p-4 font-semibold flex justify-between items-center">
                                 Quais tratamentos vocês oferecem?
-                                <span x-show="!open">➕</span>
-                                <span x-show="open">➖</span>
+                                <span x-show="!open"><i class="text-2xl bi bi-plus-lg"></i></span>
+                                <span x-show="open"><i class="text-2xl bi bi-dash-lg"></i></span>
                             </button>
                             <p x-show="open" class="p-4 text-gray-700 border-t">Oferecemos clareamento, facetas, lentes de contato dental, implantes, ortodontia e mais.</p>
                         </div>
@@ -206,8 +206,8 @@
                         <div x-data="{ open: false }" class="border border-gray-300 rounded-lg shadow-lg">
                             <button @click="open = !open" class="w-full text-left p-4 font-semibold flex justify-between items-center">
                                 O tratamento é doloroso?
-                                <span x-show="!open">➕</span>
-                                <span x-show="open">➖</span>
+                                <span x-show="!open"><i class="text-2xl bi bi-plus-lg"></i></span>
+                                <span x-show="open"><i class="text-2xl bi bi-dash-lg"></i></span>
                             </button>
                             <p x-show="open" class="p-4 text-gray-700 border-t">Usamos técnicas modernas para minimizar qualquer desconforto.</p>
                         </div>
@@ -215,8 +215,8 @@
                         <div x-data="{ open: false }" class="border border-gray-300 rounded-lg shadow-lg">
                             <button @click="open = !open" class="w-full text-left p-4 font-semibold flex justify-between items-center">
                                 Quanto tempo dura o tratamento?
-                                <span x-show="!open">➕</span>
-                                <span x-show="open">➖</span>
+                                <span x-show="!open"><i class="text-2xl bi bi-plus-lg"></i></span>
+                                <span x-show="open"><i class="text-2xl bi bi-dash-lg"></i></span>
                             </button>
                             <p x-show="open" class="p-4 text-gray-700 border-t">Isso depende do tratamento, mas a maioria dos procedimentos pode ser concluída em poucas consultas.</p>
                         </div>
@@ -225,7 +225,7 @@
                     <div class="w-full md:w-1/2 flex flex-col justify-center p-6">
                         <h2 class="text-2xl font-semibold">Ainda ficou com dúvidas?</h2>
                         <p class="text-gray-600 mt-2">Chame no WhatsApp, iremos te atender, e tirar todas as suas dúvidas. Estou ansiosa para te ajudar a consquistar seu sorriso dos sonhos!</p>
-                        <a href="https://wa.me/5511998765432" target="_blank" class="mt-4 flex items-center btn-consult bg-green-500 px-6 py-3 rounded-lg shadow-md hover:bg-green-600">
+                        <a href="https://wa.me/5511998765432" target="_blank" class="mt-4 flex items-center btn-consult bg-green-500 px-6 py-3 rounded-lg shadow-md">
                             <i class="bi bi-whatsapp text-xl mr-2"></i>
                             <span>Agendar consulta</span>
                         </a>
