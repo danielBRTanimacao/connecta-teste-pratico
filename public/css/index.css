@@ -10,11 +10,15 @@
     --signature: "Corinthia", cursive;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body,
 .bg-image,
 .bg-faq {
     color: var(--darker-color);
-    background-image: url(../images/dentist.png);
+    background-image: url(../images/dentist.webp);
     background-color: rgba(128, 128, 128, 0.4);
     background-repeat: no-repeat;
     background-position: top;
@@ -23,11 +27,12 @@ body,
 }
 
 .bg-image {
-    background-image: url(../images/consultDentist.png);
+    background-image: url(../images/consultDentist.webp);
+    background-size: cover;
 }
 
 .bg-faq {
-    background-image: url(../images/FAQ.png);
+    background-image: url(../images/FAQ.webp);
 }
 
 .glassmorphism {
@@ -86,5 +91,4 @@ li span {
 
 footer {
     background-color: var(--darker-color);
-    color: white;
 }

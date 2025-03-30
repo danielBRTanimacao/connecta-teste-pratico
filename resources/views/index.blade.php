@@ -9,8 +9,8 @@
         <title class="text-2xl">Dr. Edvaneide landing page</title>
     </head>
     <body>
-        <nav id="init" class="fixed top-0 left-0 w-full glassmorphism p-4 font-primary border-bottom">
-            <div class="flex justify-center items-center gap-50">
+        <nav id="init" class="sticky top-0 left-0 w-full glassmorphism p-4 font-primary border-bottom z-50">
+            <div class="flex justify-center items-center gap-42">
                 <a href="/" class="text-4xl signature font-bold">
                     Dr. Edvaneide
                 </a>
@@ -24,7 +24,8 @@
                 </ul>
             
                 <div>
-                    <a href="#" class="flex items-center btn-consult px-4 py-2 rounded-lg shadow-md hover:bg-green-600">
+                    <!-- Esté número e irreal mas e para testar o redirecionamento --> 
+                    <a href="https://wa.me/5511998765432" target="_blank" class="flex items-center btn-consult px-4 py-2 rounded-lg shadow-md hover:bg-green-600">
                         <i class="bi bi-whatsapp text-xl mr-2"></i>
                         <span>Agendar consulta</span>
                     </a>
@@ -38,7 +39,7 @@
                 <h1 class="text-7xl uppercase"><span class="copper">Sorria</span> com confiança!</h1>
                 <p class="py-4 font-bold">Agende sua consulta e conquiste o sorriso dos seus sonhos.</p>
                 <div class="flex items-center">
-                    <a href="#" class="flex items-center btn-consult text-darker px-15 py-5 rounded-lg shadow-md hover:bg-green-600">
+                    <a href="https://wa.me/5511998765432" target="_blank" class="flex items-center btn-consult px-15 py-5 rounded-lg shadow-md hover:bg-green-600">
                         <i class="bi bi-whatsapp text-xl mr-2"></i>
                         <span>Agendar consulta</span>
                     </a>
@@ -49,7 +50,7 @@
                     </a>
                 </div>
             </div>
-            <div class="absolute top-156 border-1 rounded-xl border-gray-400 py-5 px-35 glassmorphism text-xl">
+            <div class="absolute top-170 border-1 rounded-xl border-gray-400 py-5 px-35 glassmorphism text-xl">
                 <ul class="flex items-center gap-10">
                     <li class="flex items-center gap-2">
                         <div class="bg-white px-2 p-1 border-1 copper-border rounded-full">
@@ -83,7 +84,7 @@
             </div>
         </header>
 
-        <main class="flex flex-col justify-center items-center">
+        <main class="flex flex-col justify-center items-center" id="about">
             <section class="h-[100dvh] text-center max-w-[1100px] mx-auto px-5">
                 <h1 class="text-6xl font-bold">Como podemos transformar seu sorriso e sua vida?</h1>
                 
@@ -114,9 +115,9 @@
                 </div>
             </section>
 
-            <section class="h-[100dvh] w-full flex items-center justify-center px-5 bg-image">
+            <section class="h-[100dvh] w-full flex items-center justify-center px-5 bg-image" id="blog">
                 <div class="max-w-5xl w-full mx-auto flex items-center gap-x-10">
-                    <div class="text-start flex-1">
+                    <div class="text-start flex-1 ">
                         <h4 class="text-xl text-gray-500 font-semibold">Conheça a dentista</h4>
                         <h2 class="text-7xl font-bold copper">Edvaneide</h2>
                         <p class="text-gray-600 mt-4">
@@ -132,14 +133,14 @@
                             quod. Quam, autem consequatur.
                         </p>
                         
-                        <a href="#" class="mt-6 inline-flex items-center btn-consult text-white px-6 py-3 rounded-lg shadow-md hover:bg-green-600 transition">
+                        <a href="https://wa.me/5511998765432" target="_blank" class="mt-6 inline-flex items-center btn-consult px-6 py-3 rounded-lg shadow-md hover:bg-green-600 transition">
                             <i class="bi bi-whatsapp text-xl mr-2"></i>
                             <span>Agendar consulta</span>
                         </a>
                     </div>
             
                     <div class="flex-1">
-                        <img src="{{ asset('svg/Doctor.svg') }}" alt="dentist-image" class="max-w-full h-auto">
+                        <img src="{{ asset('svg/DoctorVariant.svg') }}" alt="dentist-image" class="max-w-full h-auto">
                     </div>
                 </div>
             </section>
@@ -179,19 +180,19 @@
                     </div>
                 </div>
             
-                <a href="#" class="mt-8 inline-flex items-center text-white px-6 py-3 rounded-lg btn-consult transition">
+                <a href="#" class="mt-8 inline-flex items-center px-6 py-3 rounded-lg btn-consult transition">
                     <i class="bi bi-pencil-square text-xl mr-2"></i>
                     <span>Deixar meu depoimento</span>
                 </a>
             </section>
             
-            <section class="max-w-6xl mx-auto py-16 px-6">
+            <section class="max-w-6xl mx-auto py-16 px-6" id="faq">
                 <div class="text-6xl font-bold text-center glassmorphism pb-10 bg-faq">
                     <h2>Perguntas</h2>
                     <h2>Frequentes</h2>
                 </div>
             
-                <div class="mt-10 flex flex-col md:flex-row gap-6">
+                <div class="mt-17 flex flex-col md:flex-row gap-6">
                     <div class="w-full md:w-1/2 space-y-4">
                         <div x-data="{ open: false }" class="border border-gray-300 rounded-lg shadow-lg">
                             <button @click="open = !open" class="w-full text-left p-4 font-semibold flex justify-between items-center">
@@ -224,7 +225,7 @@
                     <div class="w-full md:w-1/2 flex flex-col justify-center p-6">
                         <h2 class="text-2xl font-semibold">Ainda ficou com dúvidas?</h2>
                         <p class="text-gray-600 mt-2">Chame no WhatsApp, iremos te atender, e tirar todas as suas dúvidas. Estou ansiosa para te ajudar a consquistar seu sorriso dos sonhos!</p>
-                        <a href="#" class="mt-4 flex items-center btn-consult bg-green-500 text-white px-6 py-3 rounded-lg shadow-md hover:bg-green-600">
+                        <a href="https://wa.me/5511998765432" target="_blank" class="mt-4 flex items-center btn-consult bg-green-500 px-6 py-3 rounded-lg shadow-md hover:bg-green-600">
                             <i class="bi bi-whatsapp text-xl mr-2"></i>
                             <span>Agendar consulta</span>
                         </a>
@@ -232,27 +233,30 @@
                 </div>
             </section>
         </main>
-        <footer class="py-10 text-white">
-            <div class="max-w-6xl mx-auto px-6 flex justify-between">
-                <h3 class="text-2xl text-white signature font-semibold">
+        <footer class="py-10">
+            <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
+                <h3 class="text-2xl signature font-semibold text-white">
                     Dr. Edvaneide
                 </h3>
-                <p class="text-gray-400 mt-2">Dr. Edvaneide. Confie sua aprarência com quem é especialista!</p>
+                <div class="w-[300px]">
+                    <p class="font-semibold text-white">Responsavel técnico</p>
+                    <p class="text-gray-400">Dr. Edvaneide. Confie sua aprarência com quem é especialista!</p>
+                </div>
         
-                <div class="flex justify-center mt-6 gap-6">
-                    <a href="#" class="text-gray-400 hover:text-white transition">
+                <div class="flex justify-center gap-6">
+                    <a href="https://www.facebook.com/?locale=pt_BR" target="_blank" class="transition btn-consult px-2 py-1 rounded">
                         <i class="bi bi-facebook text-2xl"></i>
                     </a>
-                    <a href="#" class="text-gray-400 hover:text-white transition">
+                    <a href="https://www.instagram.com/" target="_blank" class="transition btn-consult px-2 py-1 rounded">
                         <i class="bi bi-instagram text-2xl"></i>
                     </a>
-                    <a href="#" class="text-gray-400 hover:text-white transition">
+                    <a href="https://wa.me/5511998765432" target="_blank" class="transition btn-consult px-2 py-1 rounded">
                         <i class="bi bi-whatsapp text-2xl"></i>
                     </a>
                 </div>
         
-                <div class="mt-6 text-gray-400 text-sm">
-                   <p>(12) 345678910</p>
+                <div class="text-gray-400 text-sm">
+                   <p class="font-semibold">(12) 345678910</p>
                    <p>Agende sua consulta!</p>
                 </div>
             </div>
