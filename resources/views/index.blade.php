@@ -6,16 +6,17 @@
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
         <link rel="stylesheet" href="{{ asset('css/index.css') }}">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-        <title class="text-2xl">Dr. Edvaneide landing page</title>
+        <link rel="shortcut icon" href="{{ asset('icon/odonto.png') }}" type="image/png">
+        <title class="text-2xl">Dr. Edvaneide page</title>
     </head>
     <body>
-        <nav class="sticky top-0 left-0 w-full glassmorphism p-4 font-primary border-bottom z-50">
+        <nav class="sticky top-0 left-0 w-full glassmorphism p-4 border-bottom z-50">
             <div class="flex justify-evenly items-center">
                 <a href="/" class="text-4xl signature font-bold">
                     Dr. Edvaneide
                 </a>
 
-                <ul class="flex space-x-6 nav-li navigation">
+                <ul class="hidden space-x-6 nav-li lg:flex">
                     <li><a href="#init">Início</a></li>
                     <li><a href="#about">Sobre nós</a></li>
                     <li><a href="#depoiment">Depoimentos</a></li>
@@ -23,8 +24,8 @@
                     <li><a href="#faq">FAQ</a></li>
                 </ul>
             
-                <div class="consult-hidden">
-                    <!-- Esté número e irreal mas e para testar o redirecionamento --> 
+                <div class="hidden sm:flex">
+                    <!-- Esté número e irreal apenas para testar o redirecionamento --> 
                     <a href="https://wa.me/5511998765432" target="_blank" class="flex items-center btn-consult px-4 py-2 rounded-lg shadow-md">
                         <i class="bi bi-whatsapp text-xl mr-2"></i>
                         <span>Agendar consulta</span>
@@ -33,25 +34,28 @@
             </div>
         </nav>
         
-        <header id="init" class="flex justify-center items-center h-[100dvh]"> <!-- deixar todos os abaixos responsavel --> 
-            <div class="max-w-lg">
+        <header id="init" class="flex justify-center items-center h-[50dvh] md:h-[100dvh]">
+            <div class="max-w-lg text-center md:text-start">
                 <h2 class="lead text-xl">Dr. Edvaneide</h2>
-                <h1 class="text-7xl uppercase"><span class="copper">Sorria</span> com confiança!</h1>
+                <h1 class="text-6xl sm:text-7xl uppercase"><span class="copper">Sorria</span> com confiança!</h1>
                 <p class="py-4 font-bold">Agende sua consulta e conquiste o sorriso dos seus sonhos.</p>
-                <div class="flex items-center">
+                <div class="flex items-center justify-center md:justify-start">
                     <a href="https://wa.me/5511998765432" target="_blank" class="flex items-center btn-consult px-15 py-5 rounded-lg shadow-md">
                         <i class="bi bi-whatsapp text-xl mr-2"></i>
                         <span>Agendar consulta</span>
                     </a>
                 </div>
-                <div class="py-5">
+                <div class="py-5 hidden md:flex">
                     <a href="#depoiment">
                         <img src="{{ asset('svg/Views.svg') }}" alt="img-povo-usando-o-app">
                     </a>
                 </div>
             </div>
-            <div class="results absolute top-170 border-1 rounded-xl border-gray-400 py-5 px-35 glassmorphism text-xl">
-                <ul class="flex items-center gap-10">
+            <div class="hidden lg:flex">
+                <img src="{{ asset('svg/Doctor.svg') }}" alt="dentist-image">
+            </div>
+            <div class="isHidden absolute top-170 border-1 rounded-xl border-gray-400 py-5 px-15 xl:px-35 glassmorphism text-xl">
+                <ul class="flex items-center gap-2 md:gap-10">
                     <li class="flex items-center gap-2">
                         <div class="bg-white px-2 p-1 border-1 copper-border rounded-full">
                             <i class="bi bi-bookmark"></i>
@@ -79,14 +83,11 @@
                     </li>
                 </ul>
             </div>
-            <div class="doctor-image">
-                <img src="{{ asset('svg/Doctor.svg') }}" alt="dentist-image">
-            </div>
         </header>
 
         <main class="flex flex-col justify-center items-center" id="about">
-            <section class="h-[100dvh] text-center max-w-[1100px] mx-auto px-5">
-                <h1 class="text-6xl font-bold">Como podemos transformar seu sorriso e sua vida?</h1>
+            <section class="lg:h-[100dvh] text-center max-w-[1100px] mx-auto px-5">
+                <h1 class="text-3xl lg:text-6xl font-bold">Como podemos transformar seu sorriso e sua vida?</h1>
                 
                 <div class="flex flex-wrap justify-center pt-7 gap-6">
                     <div class="bg-gray-200 rounded-xl w-[300px] shadow-xl">
@@ -117,9 +118,12 @@
 
             <section class="h-[100dvh] w-full flex items-center justify-center px-5 bg-image" id="blog">
                 <div class="max-w-5xl w-full mx-auto flex items-center gap-x-10">
-                    <div class="text-start flex-1">
+                    <div class="text-center md:text-start flex-1">
                         <h4 class="text-xl text-gray-500 font-semibold">Conheça a dentista</h4>
                         <h2 class="text-7xl font-bold copper">Edvaneide</h2>
+                        <div class="flex justify-center md:hidden">
+                            <img src="{{ asset('svg/DoctorVariant.svg') }}" alt="dentist-image" class="max-w-full h-[400px]">
+                        </div>
                         <p class="text-gray-600 mt-4">
                             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi velit 
                             illum laudantium repudiandae distinctio totam earum. Et quibusdam 
@@ -139,7 +143,7 @@
                         </a>
                     </div>
             
-                    <div class="flex-1">
+                    <div class="hidden md:flex">
                         <img src="{{ asset('svg/DoctorVariant.svg') }}" alt="dentist-image" class="max-w-full h-auto">
                     </div>
                 </div>
@@ -147,8 +151,8 @@
             
             
             <section id="depoiment" class="flex flex-col justify-center items-center max-w-6xl mx-auto py-16 px-6">
-                <img src="{{ asset('svg/SecondViews.svg') }}" alt="">
-                <h2 class="text-6xl font-bold pt-5">Mas será que vou gostar do resultado?</h2>
+                <img src="{{ asset('svg/SecondViews.svg') }}" alt="avaliation-views">
+                <h2 class="text-3xl lg:text-6xl font-bold pt-5">Mas será que vou gostar do resultado?</h2>
                 <p class="text-gray-600 pt-2 text-xl">Veja o que os pacientes dizem!</p>
             
                 <div class="mt-5 flex flex-wrap justify-center gap-6">
@@ -233,34 +237,36 @@
                 </div>
             </section>
         </main>
-        <footer class="py-10">
-            <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
-                <h3 class="text-2xl signature font-semibold text-white">
+        <footer class="py-10 bg-gray-900">
+            <div class="max-w-6xl mx-auto px-6 flex flex-wrap md:flex-nowrap justify-between items-center gap-6 text-center md:text-left">
+                <h3 class="text-2xl signature font-semibold text-white w-full md:w-auto">
                     Dr. Edvaneide
                 </h3>
-                <div class="w-[300px]">
-                    <p class="font-semibold text-white">Responsavel técnico</p>
-                    <p class="text-gray-400">Dr. Edvaneide. Confie sua aprarência com quem é especialista!</p>
+        
+                <div class="w-full md:w-[300px]">
+                    <p class="font-semibold text-white">Responsável técnico</p>
+                    <p class="text-gray-400">Dr. Edvaneide. Confie sua aparência com quem é especialista!</p>
                 </div>
         
-                <div class="flex justify-center gap-6">
+                <div class="flex justify-center md:justify-start gap-6 w-full md:w-auto">
                     <a href="https://www.facebook.com/?locale=pt_BR" target="_blank" class="transition btn-consult px-2 py-1 rounded">
-                        <i class="bi bi-facebook text-2xl"></i>
+                        <i class="bi bi-facebook text-2xl text-white"></i>
                     </a>
                     <a href="https://www.instagram.com/" target="_blank" class="transition btn-consult px-2 py-1 rounded">
-                        <i class="bi bi-instagram text-2xl"></i>
+                        <i class="bi bi-instagram text-2xl text-white"></i>
                     </a>
                     <a href="https://wa.me/5511998765432" target="_blank" class="transition btn-consult px-2 py-1 rounded">
-                        <i class="bi bi-whatsapp text-2xl"></i>
+                        <i class="bi bi-whatsapp text-2xl text-white"></i>
                     </a>
                 </div>
         
-                <div class="text-gray-400 text-sm">
-                   <p class="font-semibold">(12) 345678910</p>
-                   <p>Agende sua consulta!</p>
+                <div class="text-gray-400 text-sm w-full md:w-auto">
+                    <p class="font-semibold text-white">(12) 345678910</p>
+                    <p>Agende sua consulta!</p>
                 </div>
             </div>
         </footer>
+        
         <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.10.2/dist/cdn.min.js"></script> <!-- alpine e pra o accordion funcionar -->
     </body>
 </html>

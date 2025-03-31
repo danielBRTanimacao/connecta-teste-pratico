@@ -5,6 +5,8 @@
     --copper-color: #aa805f;
     --copper-darker: #8b5a2b;
     --darker-color: rgb(15, 28, 46);
+    --light-variant: rgba(255, 255, 255, 0.3);
+    --gray-variant: rgba(128, 128, 128, 0.4);
     --secondary-font: "Montserrat", sans-serif;
     --principal-font: "Times New Roman", Times, serif;
     --signature: "Corinthia", cursive;
@@ -19,7 +21,7 @@ body,
 .bg-faq {
     color: var(--darker-color);
     background-image: url(../images/dentist.webp);
-    background-color: rgba(128, 128, 128, 0.4);
+    background-color: var(--gray-variant);
     background-repeat: no-repeat;
     background-position: top;
     background-size: contain;
@@ -41,7 +43,7 @@ body,
 }
 
 .border-bottom {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid var(--light-variant);
 }
 
 .copper {
@@ -93,18 +95,12 @@ footer {
     background-color: var(--darker-color);
 }
 
-@media (max-width: 432.98px) {
-    .consult-hidden {
-        display: none;
+@media (max-width: 1024px) {
+    body {
+        background-image: none;
     }
-}
 
-@media (max-width: 575.98px) {
-}
-
-@media (max-width: 911.98px) {
-    .doctor-image,
-    .navigation {
+    .isHidden {
         display: none;
     }
 }
