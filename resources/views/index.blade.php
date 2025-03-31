@@ -116,7 +116,7 @@
                 </div>
             </section>
 
-            <section class="h-[100dvh] w-full flex items-center justify-center px-5 bg-image" id="blog">
+            <section class="md:h-[100dvh] w-full flex items-center justify-center py-2 px-5 bg-image" id="blog">
                 <div class="max-w-5xl w-full mx-auto flex items-center gap-x-10">
                     <div class="text-center md:text-start flex-1">
                         <h4 class="text-xl text-gray-500 font-semibold">Conheça a dentista</h4>
