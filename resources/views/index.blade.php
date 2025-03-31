@@ -10,8 +10,8 @@
         <title class="text-2xl">Dr. Edvaneide page</title>
     </head>
     <body>
-        <nav class="sticky top-0 left-0 w-full glassmorphism p-4 border-bottom z-50">
-            <div class="flex justify-evenly items-center">
+        <nav class="sticky top-0 left-0 w-full glassmorphism p-4 border-bottom z-50 ">
+            <div class="flex justify-center gap-25 xl:gap-35 items-center">
                 <a href="/" class="text-4xl signature font-bold">
                     Dr. Edvaneide
                 </a>
@@ -37,7 +37,7 @@
         <header id="init" class="flex justify-center items-center h-[50dvh] md:h-[100dvh]">
             <div class="max-w-lg text-center md:text-start">
                 <h2 class="lead text-xl">Dr. Edvaneide</h2>
-                <h1 class="text-6xl sm:text-7xl uppercase"><span class="copper">Sorria</span> com confiança!</h1>
+                <h1 class="text-5xl sm:text-7xl uppercase"><span class="copper">Sorria</span> com confiança!</h1>
                 <p class="py-4 font-bold">Agende sua consulta e conquiste o sorriso dos seus sonhos.</p>
                 <div class="flex items-center justify-center md:justify-start">
                     <a href="https://wa.me/5511998765432" target="_blank" class="flex items-center btn-consult px-15 py-5 rounded-lg shadow-md">
