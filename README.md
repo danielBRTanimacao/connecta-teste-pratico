@@ -27,8 +27,6 @@ Abra o projeto
 cd connecta-teste-pratico
 ```
 
-### Primeiro teste diretorio `test-web-scraping`
-
 Para rodar o teste basta utilizar o comando
 
 ```
